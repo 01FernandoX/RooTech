@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RooTech - Especialistas en mantenimiento preventivo, reparación y optimización de computadoras y laptops.">
+    <title>RooTech | Tu computadora como nueva</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <style>
+        /* Ajuste elegante para el Logo en el Header */
+        .logo img.logo-img {
+            height: 42px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        /* BANNER ESTÉTICO LARGO USANDO IMAGEN 1 */
+        .banner-trabajo {
+            position: relative;
+            background: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.85)), url('assets/imagen1.jpg') no-repeat center center/cover;
+            padding: 80px 20px;
+            text-align: center;
+            color: #ffffff;
+            margin: 40px 0;
+            background-attachment: fixed; /* Efecto parallax suave */
+        }
+        .banner-trabajo h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        .banner-trabajo p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #d1d5db;
+        }
+
+        /* GALERÍA ELEGANTE PARA IMÁGENES 2 Y 3 */
+        .galeria-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .galeria-titulo {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            aspect-ratio: 16 / 9;
+        }
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .galeria-item:hover img {
+            transform: scale(1.05);
+        }
+        .galeria-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px;
+            color: #fff;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .galeria-item:hover .galeria-overlay {
+            transform: translateY(0);
+        }
+        .galeria-overlay h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+            .banner-trabajo {
+                padding: 60px 15px;
+            }
+            .banner-trabajo h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/MI LOGO.png" alt="RooTech Logo" class="logo-img"> RooTech
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#problema">Problema</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content reveal slide-up">
+                <h1>Tu computadora <br><span class="glow-text">como nueva.</span></h1>
+                <p>Servicio técnico especializado: mantenimiento, optimización y reparación de PC y laptops con atención 100% personalizada.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Solicitar cotización</a>
+                    <a href="#contacto" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> Describe tu problema</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="problema" class="problema section-padding">
+            <div class="container reveal fade-in">
+                <h2 class="section-title">¿Tu equipo falla? <span class="glow-text">Nosotros lo solucionamos</span></h2>
+                <div class="grid-3">
+                    <div class="card glass">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h3>Lentitud Extrema</h3>
+                        <p>Computadoras lentas que tardan en arrancar o abrir programas.</p>
+                    </div>
+                    <div class="card glass">
+                        <i class="fa-solid fa-fire"></i>
+                        <h3>Sobrecalentamiento</h3>
+                        <p>Equipos que se apagan solos o hacen demasiado ruido por falta de mantenimiento.</p>
+                    </div>
+                    <div class="card glass">
+                        <i class="fa-solid fa-bug"></i>
+                        <h3>Virus y Malware</h3>
+                        <p>Ventanas emergentes, robo de información y sistemas operativos dañados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-trabajo">
+            <h2>Transparencia y profesionalismo en cada reparación</h2>
+            <p>Nos tomamos muy en serio el cuidado de tu equipo. Utilizamos herramientas de diagnóstico avanzadas y procedimientos certificados para garantizar tu tranquilidad.</p>
+        </section>
+
+        <section id="nosotros" class="nosotros section-padding">
+            <div class="container grid-2 reveal slide-up">
+                <div class="nosotros-text">
+                    <h2 class="section-title text-left">Sobre <span class="glow-text">RooTech</span></h2>
+                    <p>Brindamos atención personalizada con un enfoque estricto en la calidad. Nuestro diagnóstico profesional asegura soluciones rápidas y un servicio confiable para que no detengas tu trabajo ni tu vida digital.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card glass">
+                        <h3 class="counter" data-target="100">0</h3><span>%</span>
+                        <p>Profesionalismo</p>
+                    </div>
+                    <div class="stat-card glass">
+                        <h3 class="counter" data-target="100">0</h3><span>%</span>
+                        <p>Garantía</p>
+                    </div>
+                    <div class="stat-card glass">
+                        <h3 class="counter" data-target="24">0</h3><span>h</span>
+                        <p>Tiempo de Respuesta</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria-container reveal fade-in">
+            <h2 class="galeria-titulo">Manos a la obra</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="assets/2.jpg" alt="Mantenimiento de componentes">
+                    <div class="galeria-overlay">
+                        <h4>Diagnóstico a Nivel Componente</h4>
+                        <p>Revisión minuciosa de circuitos y tarjetas madre.</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="assets/3.jpg" alt="Reparación de hardware en taller">
+                    <div class="galeria-overlay">
+                        <h4>Área de Trabajo Especializada</h4>
+                        <p>Tus equipos en las manos más seguras y profesionales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="servicios section-padding">
+            <div class="container reveal fade-in">
+                <h2 class="section-title">Nuestros <span class="glow-text">Servicios</span></h2>
+                <div class="grid-3">
+                    <div class="card glass service-card">
+                        <i class="fa-solid fa-broom"></i>
+                        <h3>Mantenimiento Preventivo</h3>
+                        <p>Limpieza interna, cambio de pasta térmica y optimización de software.</p>
+                    </div>
+                    <div class="card glass service-card">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        <h3>Eliminación de Virus</h3>
+                        <p>Detección, cuarentena y limpieza completa de amenazas y malware.</p>
+                    </div>
+                    <div class="card glass service-card">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h3>Reparación de PC</h3>
+                        <p>Diagnóstico preciso y reparación de componentes dañados.</p>
+                    </div>
+                    <div class="card glass service-card">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                        <h3>Reparación de Laptops</h3>
+                        <p>Corrección de fallas en bisagras, pantallas, teclados y placas.</p>
+                    </div>
+                    <div class="card glass service-card">
+                        <i class="fa-brands fa-windows"></i>
+                        <h3>Sistemas Operativos</h3>
+                        <p>Instalación limpia de Windows, particiones y optimización profunda.</p>
+                    </div>
+                    <div class="card glass service-card">
+                        <i class="fa-solid fa-memory"></i>
+                        <h3>Upgrade de Hardware</h3>
+                        <p>Instalación de SSD, ampliación de RAM y mejoras de rendimiento gamer/workstation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="beneficios section-padding">
+            <div class="container reveal slide-up">
+                <h2 class="section-title">¿Por qué elegir <span class="glow-text">RooTech</span>?</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item"><i class="fa-solid fa-bolt"></i> Atención rápida y eficiente</div>
+                    <div class="benefit-item"><i class="fa-solid fa-tag"></i> Precios justos y accesibles</div>
+                    <div class="benefit-item"><i class="fa-solid fa-stethoscope"></i> Diagnóstico profesional</div>
+                    <div class="benefit-item"><i class="fa-solid fa-house"></i> Servicio a domicilio disponible</div>
+                    <div class="benefit-item"><i class="fa-solid fa-certificate"></i> Garantía por escrito en todo trabajo</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto section-padding">
+            <div class="container reveal fade-in">
+                <h2 class="section-title"><span class="glow-text">Contacto</span></h2>
+                <div class="contact-card glass">
+<p>Estamos listos para ayudarte. Contáctanos por WhatsApp o correo electrónico y con gusto resolveremos tus dudas.</p>                    <div class="phone-number">
+                        <i class="fa-solid fa-phone"></i> 561 161 8064
+                    </div>
+                    <a href="tel:5611618064" class="btn btn-primary">Llamar Ahora</a>
+                    
+                    <div class="social-links">
+<a href="https://wa.me/525611618064" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>                        <a href="mailto:et472211@gmail.com" class="social-icon" aria-label="Enviar correo a RooTech">
+    <i class="fa-solid fa-envelope"></i>
+</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RooTech. Todos los derechos reservados.</p>
+            <div class="footer-socials">
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/525611618064?text=Hola%20RooTech,%20me%20interesa%20recibir%20informaci%C3%B3n%20sobre%20mantenimiento%20o%20reparaci%C3%B3n%20de%20mi%20equipo." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
